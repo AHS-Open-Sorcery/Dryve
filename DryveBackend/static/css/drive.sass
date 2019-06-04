@@ -1,0 +1,103 @@
+@import "variables"
+
+nav
+  box-shadow: none
+
+body
+  background-color: $site-primary-color
+
+main
+  padding-top: 64px
+  min-height: 0
+
+footer
+  position: fixed
+  bottom: 0
+  left: 0
+  right: 0
+  width: 100%
+
+label
+  color: $site-primary-color !important
+
+input[type="text"]
+  color: $site-primary-color !important
+  border-color: $site-primary-color !important
+
+input[type="time"]
+  color: $site-primary-color
+
+
+section
+  background-color: white
+  width: 75%
+  margin: 50px auto
+  border-radius: 15px
+
+input[type="text"] + label
+  pointer-events: none
+
+  *
+    pointer-events: all
+
+.ui-datepicker
+  background: white
+  border-radius: 5px
+  border: 1px solid $site-primary-color
+  margin-top: 10px
+  max-width: 400px
+  min-width: 300px
+
+  .ui-datepicker-calendar
+    thead,
+    tbody
+      tr
+        td
+          border: 1px solid #e1e1e1
+          text-align: center
+
+          a
+            font-size: 16px
+            font-family: "Lemon/Milk", sans-serif
+            color: $site-primary-color
+
+        th
+          border: 1px solid #e1e1e1
+
+          span
+            text-align: center
+            display: block
+            margin: 0 auto
+            color: $site-secondary-color
+
+  .ui-datepicker-header
+    position: relative
+    min-height: 30px
+
+    .ui-corner-all
+      position: absolute
+      top: 5px
+      cursor: pointer
+      transition: 0.5s all
+      color: $site-secondary-color
+
+      &:hover
+        color: #2678a0
+
+      &.ui-datepicker-prev
+        left: 5px
+
+      &.ui-datepicker-next
+        right: 5px
+
+    .ui-datepicker-title
+      position: absolute
+      top: 5px
+      left: 35px
+      right: 35px
+      width: auto
+      text-align: center
+      font-family: "Lemon/Milk", sans-serif
+      font-weight: bold
+      font-size: 18px
+      color: $site-primary-color

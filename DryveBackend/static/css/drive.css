@@ -1,0 +1,89 @@
+nav {
+  box-shadow: none; }
+
+main {
+  padding-top: 64px;
+  background-color: #2f9900;
+  min-height: 100vh; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%; }
+
+label {
+  color: #2f9900 !important; }
+
+input[type="text"] {
+  color: #2f9900 !important;
+  border-color: #2f9900 !important; }
+
+input[type="time"] {
+  color: #2f9900; }
+
+section {
+  background-color: white;
+  width: 75%;
+  margin: 50px auto;
+  border-radius: 15px; }
+
+input[type="text"] + label {
+  pointer-events: none; }
+  input[type="text"] + label * {
+    pointer-events: all; }
+
+.ui-datepicker {
+  background: white;
+  border-radius: 5px;
+  border: 1px solid #2f9900;
+  margin-top: 10px;
+  max-width: 400px;
+  min-width: 300px; }
+  .ui-datepicker .ui-datepicker-calendar thead tr td,
+  .ui-datepicker .ui-datepicker-calendar tbody tr td {
+    border: 1px solid #e1e1e1;
+    text-align: center; }
+    .ui-datepicker .ui-datepicker-calendar thead tr td a,
+    .ui-datepicker .ui-datepicker-calendar tbody tr td a {
+      font-size: 16px;
+      font-family: "Lemon/Milk", sans-serif;
+      color: #2f9900; }
+  .ui-datepicker .ui-datepicker-calendar thead tr th,
+  .ui-datepicker .ui-datepicker-calendar tbody tr th {
+    border: 1px solid #e1e1e1; }
+    .ui-datepicker .ui-datepicker-calendar thead tr th span,
+    .ui-datepicker .ui-datepicker-calendar tbody tr th span {
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+      color: #990099; }
+  .ui-datepicker .ui-datepicker-header {
+    position: relative;
+    min-height: 30px; }
+    .ui-datepicker .ui-datepicker-header .ui-corner-all {
+      position: absolute;
+      top: 5px;
+      cursor: pointer;
+      transition: 0.5s all;
+      color: #990099; }
+      .ui-datepicker .ui-datepicker-header .ui-corner-all:hover {
+        color: #2678a0; }
+      .ui-datepicker .ui-datepicker-header .ui-corner-all.ui-datepicker-prev {
+        left: 5px; }
+      .ui-datepicker .ui-datepicker-header .ui-corner-all.ui-datepicker-next {
+        right: 5px; }
+    .ui-datepicker .ui-datepicker-header .ui-datepicker-title {
+      position: absolute;
+      top: 5px;
+      left: 35px;
+      right: 35px;
+      width: auto;
+      text-align: center;
+      font-family: "Lemon/Milk", sans-serif;
+      font-weight: bold;
+      font-size: 18px;
+      color: #2f9900; }
+
+/*# sourceMappingURL=drive.css.map */

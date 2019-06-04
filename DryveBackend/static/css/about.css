@@ -1,0 +1,21 @@
+body {
+  min-height: 0; }
+
+nav {
+  box-shadow: none; }
+
+main {
+  margin-top: 64px; }
+
+section h1 {
+  font-size: 52px; }
+section p {
+  font-size: 20px; }
+section a {
+  color: #2f9900;
+  transition: 0.5s all;
+  text-decoration: underline; }
+  section a:hover {
+    opacity: 0.6; }
+
+/*# sourceMappingURL=about.css.map */

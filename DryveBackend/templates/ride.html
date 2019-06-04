@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+{% from "macros.html" import head, nav, importJS, footer %}
+
+{{ head("Dryve | Ride") }}
+<link rel="stylesheet" href="static/css/ride.css?{{ range(1, 1000000000000) | random }}">
+<body id="body">
+{{ nav(logged_in) }}
+<main id="main">
+    <section class="section">
+        <h1 style="margin-bottom: 20px">Catch a Ryde</h1>
+        <div class="row" style="margin: 0; width: 100%">
+            <form class="col s12" action="{{ url_for('ride') }}" method="post">
+                <div class="row">
+                    <div class="input-field col s5">
+                        <i class="material-icons prefix">vpn_key</i>
+                        <input id="ride_id" type="text" class="validate" name="ride_id"
+                               onfocus="focusInput(this)"
+                               onfocusout="unfocusInput(this)" required value="{{ '' if id == none else id }}">
+                        <label for="ride_id">Ride ID</label>
+                    </div>
+
+                    <div class="input-field col s5 push-s2">
+                        <i class="material-icons prefix">home</i>
+                       <input id="pickup" type="text" class="validate" name="pickup"
+                               onfocus="focusInput(this)"
+                               onfocusout="unfocusInput(this)" required>
+                        <label for="pickup">Pickup Location</label>
+
+                    </div>
+                </div>
+
+
+                <p>{{ message }}</p>
+                <br>
+
+                <button class="btn waves-effect waves-light btn-large btn-primary" type="submit" name="action">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </section>
+</main>
+{{ footer() }}
+{{ importJS() }}
+<script type="text/javascript" src="static/js/drive.js?{{ range(1, 1000000000000) | random }}"></script>
+</body>
+</html>

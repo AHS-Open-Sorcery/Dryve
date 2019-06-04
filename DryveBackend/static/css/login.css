@@ -1,0 +1,41 @@
+body {
+  background-color: #2f9900; }
+
+#nav {
+  box-shadow: none; }
+
+.valign-wrapper .container {
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 15px;
+  color: white;
+  text-align: center; }
+  .valign-wrapper .container strong {
+    font-weight: bold; }
+  .valign-wrapper .container h1 {
+    font-size: 45px !important; }
+  .valign-wrapper .container p {
+    font-size: 22px; }
+    .valign-wrapper .container p.small {
+      font-size: 14px; }
+  .valign-wrapper .container a {
+    display: inline !important;
+    color: white;
+    text-decoration: underline;
+    transition: 0.5s all; }
+    .valign-wrapper .container a:hover {
+      opacity: 0.75; }
+
+.g-signin2 {
+  width: 100%; }
+  .g-signin2 > div {
+    margin: 0 auto; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%; }
+
+/*# sourceMappingURL=login.css.map */

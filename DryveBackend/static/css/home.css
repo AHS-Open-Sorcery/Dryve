@@ -1,0 +1,28 @@
+#main .valign-wrapper.full-screen {
+  min-height: 100vh; }
+#main .valign-wrapper #home-logo {
+  max-width: 20%;
+  height: auto;
+  display: block;
+  margin: 0 auto; }
+#main .valign-wrapper h1 {
+  min-width: 100%;
+  text-align: center;
+  font-size: 36px;
+  margin: 7.5px 0 15px 0; }
+#main .valign-wrapper a {
+  display: block;
+  margin: 0 auto;
+  width: 160px; }
+
+.btn-secondary {
+  margin-bottom: 10px !important; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%; }
+
+/*# sourceMappingURL=home.css.map */

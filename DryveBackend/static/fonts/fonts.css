@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+@font-face {
+    font-family: 'Lemon/Milk';
+    src: url('LemonMilkitalic.woff2') format('woff2'),
+        url('LemonMilkitalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Lemon/Milk';
+    src: url('LemonMilklight.woff2') format('woff2'),
+        url('LemonMilklight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lemon/Milk';
+    src: url('LemonMilk.woff2') format('woff2'),
+        url('LemonMilk.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lemon/Milk';
+    src: url('LemonMilkbold.woff2') format('woff2'),
+        url('LemonMilkbold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lemon/Milk';
+    src: url('LemonMilklightitalic.woff2') format('woff2'),
+        url('LemonMilklightitalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Lemon/Milk';
+    src: url('LemonMilkbolditalic.woff2') format('woff2'),
+        url('LemonMilkbolditalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}

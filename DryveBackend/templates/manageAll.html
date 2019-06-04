@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+{% from "macros.html" import head, nav, importJS, footer %}
+{{ head("Dryve | Manage Rides") }}
+<link rel="stylesheet" href="/static/css/login.css?{{ range(1, 1000000000000) | random }}">
+<body id="body">
+{{ nav(logged_in) }}
+<main id="main">
+    <div class="valign-wrapper full-screen">
+        <div class="container">
+            <h1 style="font-size: 75px!important;">Your Dryves</h1>
+            <ul style="font-size: 25px;">
+                {% for trip in trips %}
+                <li>
+                    <a href="/manageTrip/{{trip.id}}">From {{ trip.origin.full_address() }} to {{ trip.dest.full_address() }}, <strong style="font-weight: bold">ID: <span style="font-family: monospace">{{ trip.id }}</span></strong></a></li>
+                {% endfor %}
+            </ul>
+            <h1 style="font-size: 75px!important;">Your Rydes</h1>
+            <ul style="font-size: 25px;">
+                {% for trip in ride_trips %}
+                <li>
+                    <a href="/manageTrip/{{trip.id}}">From {{ trip.origin.full_address() }} to {{ trip.dest.full_address() }}, <strong style="font-weight: bold">ID: <span style="font-family: monospace">{{ trip.id }}</span></strong></a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</main>
+{{ importJS() }}
+{{ footer() }}
+</body>
+</html>

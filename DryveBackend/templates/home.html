@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+{% from "macros.html" import head, nav, importJS, footer %}
+
+{{ head("Dryve | Home") }}
+<link rel="stylesheet" href="static/css/home.css?{{ range(1, 1000000000000) | random }}">
+<body id="body">
+{{ nav(logged_in) }}
+<main id="main">
+    <div class="valign-wrapper full-screen">
+        <div class="row" style="margin: 0; width: 100%">
+            <div class="col s12">
+                <img id="home-logo" src="static/img/Dryve-Logo.png" alt="Dryve Logo">
+            </div>
+            <div class="col s12">
+                <h1>Don't be a car<em>fool</em>, use Dryve to carpool!</h1>
+                {% if logged_in == 0 %}
+                <a class="waves-effect waves-light btn-large btn-secondary" href="/login">Get Started</a>
+                {% else %}
+                <a class="waves-effect waves-light btn-large btn-secondary" href="/drive" style="width: 190px">Create a Dryve</a>
+                {% endif %}
+                <a class="waves-effect waves-light btn-small btn-secondary" href="/about">Learn More</a>
+            </div>
+        </div>
+    </div>
+</main>
+{{ footer() }}
+{{ importJS() }}
+</body>
+</html>

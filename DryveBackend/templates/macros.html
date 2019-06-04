@@ -1,0 +1,85 @@
+{% macro head(title) -%}
+<head>
+    <base href="/">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import main.css-->
+    <link type="text/css" rel="stylesheet" href="static/css/main.css?{{ range(1, 1000000000000) | random }}"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>{{ title }}</title>
+
+    <!-- FontAwesome -->
+    <script src="static/fontawesome-pro-5.6.3-web/js/all.min.js" type="text/javascript"></script>
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script
+            src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+            crossorigin="anonymous"></script>
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id"
+          content="774990506311-e1ot6iitq72uvnk4f5stsc1rfjqr8le6.apps.googleusercontent.com">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="static/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="194x194" href="static/img/favicon/favicon-194x194.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="static/img/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="static/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="static/img/favicon/safari-pinned-tab.svg" color="#2f9900">
+    <link rel="shortcut icon" href="static/img/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2f9900">
+    <meta name="msapplication-config" content="static/img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+</head>
+{%- endmacro %}
+
+{% macro nav(logged_in) -%}
+<nav id="nav">
+    <div class="nav-wrapper">
+        <a href="/" class="brand-logo" title="Go to the home page"><img src="static/img/Dryve-Logo-Round.png"
+                                                                        alt="Dryve logo"/></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/about" title="About Dryve">About</a></li>
+            {% if logged_in == 0 %}
+            <li><a href="/login" title="Log in to Dryve">Log In</a></li>
+            {% else %}
+            <li><a href="/manageTrip" title="See all your trips">Manage Trips</a></li>
+            <li><a href="/drive" title="Post an upcoming drive">Drive</a></li>
+            <li><a href="/ride" title="Join a ride">Ride</a></li>
+            <li><a href="/logout" title="Log out of Dryve ">Log Out</a></li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
+{%- endmacro %}
+
+{% macro importJS() -%}
+<script type="text/javascript" src="static/js/redirects.js?{{ range(1, 1000000000000) | random }}"></script>
+<script type="text/javascript" src="static/js/GoogleSignIn.js?{{ range(1, 1000000000000) | random }}"></script>
+<script type="text/javascript" src="static/js/textInput.js?{{ range(1, 1000000000000) | random }}"></script>
+{%- endmacro %}
+
+{% macro footer() -%}
+<div style="margin-top: 50px"></div>
+<footer id="footer">
+    <div class="container">
+        <h1>&copy; 2019 <strong>OPEN SORCERY</strong>: <a href="https://ayushzenith.tech" target="_blank" title="Visit Ayush's website">Ayush
+            Zenith</a>, <a href="https://ivanovich.us" target="_blank" title="Visit Daniel's website">Daniel
+            Ivanovich</a>, <a href="https://github.com/jzhu2020" target="_blank" title="Visit Justin on GitHub">Justin
+            Zhu</a>, & <a href="https://broaderator.com/" target="_blank" title="Visit Michael's website">Michael
+            Peng</a> <a href="https://github.com/Ivanov1ch/Dryve" target="_blank" title="Visit Dryve on GitHub"><i
+                class="fab fa-github"></i></a></h1>
+    </div>
+</footer>
+{%- endmacro %}

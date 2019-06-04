@@ -1,0 +1,49 @@
+@import "variables"
+
+body
+  background-color: $site-primary-color
+
+#nav
+  box-shadow: none
+
+.valign-wrapper
+  .container
+    width: 90%
+    margin: 0 auto
+    border-radius: 15px
+    color: white
+    text-align: center
+
+    strong
+      font-weight: bold
+
+    h1
+      font-size: 45px!important
+
+    p
+      font-size: 22px
+
+      &.small
+        font-size: 14px
+
+    a
+      display: inline!important
+      color: white
+      text-decoration: underline
+      transition: 0.5s all
+
+      &:hover
+        opacity: 0.75
+
+.g-signin2
+  width: 100%
+
+  > div
+    margin: 0 auto
+
+footer
+  position: fixed
+  bottom: 0
+  left: 0
+  right: 0
+  width: 100%

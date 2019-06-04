@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+{% from "macros.html" import head, nav, importJS, footer %}
+{{ head("Dryve | Manage Ride") }}
+<link rel="stylesheet" href="static/css/login.css?{{ range(1, 1000000000000) | random }}">
+<body id="body">
+{{ nav(logged_in) }}
+<main id="main">
+    <div class="valign-wrapper full-screen">
+        <div class="container">
+            <h1 style="font-size: 75px!important;">Trip ID: <span style="font-family: monospace">{{ trip_id }}</span><br></h1>
+            <h2>{{ num_riders }} Riders:</h2>
+            <ul style="font-size: 20px;">
+                {% for rider, location in riders %}
+                <li>{{ rider.name }}, to be picked up at {{ location.full_address() }}</li>
+                {% endfor %}
+            </ul>
+            {% if is_rider %}
+            You are a ryder of this trip
+            {% endif %}
+            {% if requests|length > 0 %}
+            <h2>Requests to Join</h2>
+            <ul style="font-size: 20px;">
+                {% for req in requests %}
+                <li>{{ req.rider.name }} wants to be picked up at {{ req.pickup.full_address() }}</li>
+                <a style="font-weight: bold; font-size: 24px;" href="/accept?id={{ req.id }}">Accept</a>
+                <a style="font-weight: bold; font-size: 24px;"  href="/deny?id={{ req.id }}">Deny</a>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <h2>No ongoing Requests</h2>
+            {% endif %}
+            <p style="font-size: 36px!important;"><a href="{{ maps_url }}" target="_blank">View Your Custom Route</a><br>
+                Suggested Departure Time: {{ start_time }}<br>Total distance: {{'%0.2f' % distance|float}} mi<br>Total time: {{'%0.2f' % time|float}} min</p>
+            <br>
+            <h2>Route Legs</h2>
+            <ul>
+                {% for duration, distance, from, to in legs %}
+                <li>From {{ from }} to {{ to }}: {{distance}}, {{duration}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</main>
+{{ importJS() }}
+{{ footer() }}
+</body>
+</html>
